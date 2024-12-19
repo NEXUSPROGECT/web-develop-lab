@@ -1,0 +1,55 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% tailwind_css %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'priject-image/site-icon.png' %}" type="image/x-icon">  
+    <title>О нас</title>
+  </head>
+
+  <body class="bg-gray-700">
+    <!-- Навигационная панель -->
+    <nav class="fixed top-0 left-0 w-full text-center py-4 bg-gray-800 z-50 h-16">
+      <ul class="inline-flex space-x-8">
+          <li><a href="{% url 'blog:index' %}" class="text-white text-xl sm:text-3xl">Домой</a></li>
+          <li><a href="{% url 'blog:about' %}" class="text-white text-xl sm:text-3xl">О нас</a></li>
+          <li><a href="#" class="text-white text-xl sm:text-3xl">Контакты</a></li>
+          <li><a href="{% url 'users:profile' %}" class="text-white text-xl sm:text-3xl">Аккаунт</a></li>
+    </ul>
+    </nav>
+
+    <hr class="bg-amber-950">
+
+    <!-- Основной контент, оформленный как статьи -->
+    <div class="pt-16 container px-4 max-w-md mx-auto md:max-w-6xl">
+      <hr class="bg-amber-950 mb-6">
+        <p class="text-center text-2xl sm:text-4xl text-white">О нас</p>
+        <p class="mt-6 sm:text-2xl text-white">Ogólnie znana teza głosi, iż użytkownika może rozpraszać zrozumiała 
+            zawartość strony, kiedy ten chce zobaczyć sam jej wygląd. Jedną z 
+            mocnych stron używania Lorem Ipsum jest to, że ma wiele różnych 
+            „kombinacji” zdań, słów i akapitów, w przeciwieństwie do zwykłego: 
+            „tekst, tekst, tekst”, sprawiającego, że wygląda to „zbyt czytelnie” 
+            po polsku. Wielu webmasterów i designerów używa Lorem Ipsum jako 
+            domyślnego modelu tekstu i wpisanie w internetowej wyszukiwarce 
+            ‘lorem ipsum’ spowoduje znalezienie bardzo wielu stron, które wciąż 
+            są w budowie. </p>
+        <p class="mt-6 text-right text-3xl text-white">&copy;Мой Сайт™</p>
+    </div>
+  
+    <footer class="fixed bottom-0 left-0 w-full bg-gray-800 shadow-inner z-50">
+      <div class="container mx-auto px-4 py-4 text-center text-white">
+        &copy; 2024 Мой Сайт. Все права защищены.
+      </div>
+    </footer>
+
+    <!-- Отступ для основного контента, чтобы не перекрывался футером -->
+    <div class="pb-16"></div>
+  
+  </body>
+</html>
